@@ -10,10 +10,12 @@ include_directories(include)
 # Add Source Files
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 
-# Find and Link PSQL
+# Find PSQL
 find_package(PostgreSQL REQUIRED)
+# Find Qt
 find_package(Qt6 REQUIRED COMPONENTS Widgets) 
 
+# Link Packages
 add_executable(DBMS ${SOURCES})
 target_link_libraries(DBMS Qt6::Widgets PostgreSQL::PostgreSQL)
 
