@@ -5,7 +5,7 @@
 #include <QVBoxLayout>
 #include <QTextEdit>
 
-#include "db/db.hpp"
+#include "db/database.hpp"
 
 int main(int argc, char *argv[]) {
   QApplication app(argc, argv);
